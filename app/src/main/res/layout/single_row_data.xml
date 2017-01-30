@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:layout_margin="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:padding="1dp"
+                android:layout_margin="5dp"
+                android:transitionName="@string/photoTransitionName"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivImage"
+                android:layout_toEndOf="@+id/ivImage"
+                android:layout_margin="5dp"
+                >
+
+                <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/textColorBlack"
+                    android:text="Name of user"
+                    android:singleLine="true"
+                    android:transitionName="@string/photoTransitionName"
+                    />
+
+
+                <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColorGray"
+                    android:text="Username"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                    android:id="@+id/tvUserId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColorGray"
+                    android:text="UserID"
+                    android:layout_below="@+id/tvUserName"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvUserName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivLikes"
+                        android:layout_width="16dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_like"
+                        android:layout_toLeftOf="@+id/tvLikes"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                        android:id="@+id/tvLikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/textColorGray"
+                        android:text="25"
+                        android:layout_marginLeft="5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rlTop"
+            android:background="@color/transparentBlack"
+            />
+
+        <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+            android:id="@+id/tvViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View Details"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/vDivider"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:scaleType="fitXY"
+            android:background="@color/textColorGray"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:background="@color/transparentBlackBg"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            >
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="3dp"
+                    android:layout_marginTop="60dp"
+                    android:transitionName="@string/photoTransitionName"
+                    />
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cvCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="2dp"
+                    card_view:contentPadding="5dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    card_view:cardBackgroundColor="@color/textColorWhite"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:padding="10dp"
+                        >
+
+                        <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Arshad Kazmi"
+                            android:textSize="18dp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/textColorBlack"
+                            android:transitionName="@string/nameTransitionName"
+                            />
+
+                        <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="arshadkazmi42"
+                            android:layout_below="@+id/tvName"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:textColor="@color/textColorGray"
+                            />
+
+                        <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                            android:id="@+id/tvUserId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="arshad123456"
+                            android:layout_below="@+id/tvUserName"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:textColor="@color/transparentBlackBg"
+                            />
+
+
+                        <com.arshad.mindvalley.global.widget.CustomFontRegularTextView
+                            android:id="@+id/tvView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Profile"
+                            android:textColor="@color/textColorWhite"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_border_primary_selector"
+                            android:gravity="center_horizontal"
+                            android:textAllCaps="true"
+                            android:layout_below="@id/tvUserId"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="60dp"
+                            />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cvCard"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
